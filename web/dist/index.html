@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OfficialNFT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="scripts/check.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="/" class="logo"><img src="images/logo.png"></a>
+            <div class="action">
+                <a href="/mynfts.html" class="mynfts">My NFTs</a>
+                <a href="#" class="marketplace">marketplace</a>
+                <a href="#" class="primaryBtn connectWallet">CONNECT WALLET</a>
+                <a href="#" class="connectWalletAddress"></a>
+            </div>
+        </header>
+        <div class="main">
+            <p class="listPath">Listed:<span>NEWEST</span></p>
+            <div class="itemList">
+                <!-- <div class="item">
+                    <a class="imgFrame itemImg" href="./detail.html">
+                        <img src="http://fakeimg.pl/285x285" alt="Image not found" onerror="this.onerror=null;this.src='./images/default.png';">
+                    </a>    
+                    <div class="itemInfo">
+                        <h2 class="itemTitle">Unlocked Potentials</h2>
+                        <div class="avatar">
+                            <div class="avatarBg">
+                                <img src="http://fakeimg.pl/20x20" onerror="this.onerror=null;this.style='display:none;';this.parentNode.style='background-color: black;'">
+                            </div>
+                            <p class="avatarName">icarusdjr</p>
+                        </div>
+                    </div>
+                    <div class="priceInfo">
+                        <div class="price">
+                            <p>Price:</p>
+                            <p>0.3 OFCL</p>
+                            <p>$240.33</p>
+                        </div>
+                        <a class="primaryBtn">Place a bid</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <a class="imgFrame itemImg" href="./detail.html">
+                        <img src="http://fakeimg.pl/285x285/gg" alt="Image not found" onerror="this.onerror=null;this.src='./images/default.png';">
+                    </a>    
+                    <div class="itemInfo">
+                        <h2 class="itemTitle">Unlocked Potentials</h2>
+                        <div class="avatar">
+                            <div class="avatarBg">
+                                <img src="http://fakeimg.pl/20x20/gg" onerror="this.onerror=null;this.style='display:none;';this.parentNode.style='background-color: black;'">
+                            </div>
+                            <p class="avatarName">icarusdjr</p>
+                        </div>
+                    </div>
+                    <div class="priceInfo">
+                        <div class="price">
+                            <p>Price:</p>
+                            <p>0.3 OFCL</p>
+                            <p>$240.33</p>
+                        </div>
+                        <a class="primaryBtn">Place a bid</a>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="sendPopup">
+        <form class="sendForm" action="javascript:;">
+            <label for="wallectAddress">
+                <p>Wallet address:</p>
+                <input type="text" name="wallectAddress" id="wallectAddress">
+            </label>
+            <input class="primaryBtn cancelBtn" type="button" value="Cancel">
+            <input class="primaryBtn sendBtn" type="submit" value="Send to wallet">
+        </form>  
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+<script src="scripts/common.js"></script>
+<script src="scripts/config.js"></script>
+<script src="scripts/transaction.js"></script>
+<script src="scripts/index.js"></script>
+</html>

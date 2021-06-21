@@ -1,0 +1,9 @@
+.listPath {
+    width: 100%;
+    text-align: right;
+    margin: 20px 0;
+}
+
+.listPath span {
+    margin-left: 10px;
+}
