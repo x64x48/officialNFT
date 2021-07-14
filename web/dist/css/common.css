@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+/* 預設設定 */
+img {
+    -webkit-user-drag: none;
+}
+
+html ,body {
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+    -webkit-text-size-adjust: none;
+}
+
+body {
+    background-color: #E5E5E5;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+}
+/* 預設設定 */
+
+.container {
+    width: 1440px;
+    background-color: #fff;
+    margin: auto;
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.5px #B6B6B6 solid;
+}
+
+header .logo {
+    width: 275px;
+    margin-left: 40px;
+}
+
+header .logo img {
+    display:block;
+    width: 100%;
+}
+
+header .action {
+    font-size: 0;
+}
+
+header .action .marketplace, .mynfts {
+    color: black;
+    font-size: 12px;
+    line-height: 14px;
+    text-decoration: none;
+}
+
+.mynfts {
+    display: none;
+    margin-right: 40px;
+}
+
+header .action .connectWallet {
+    margin: 0 40px;
+}
+
+.connectWalletAddress {
+    display: none;
+    width: 150px;
+    height: 35px;
+    font-size: 12px;
+    line-height: 14px;
+    padding: 10px 25px;
+    text-align: center;
+    color: white;
+    background-color: black;
+    border-radius: 50px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all .2s;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -o-user-select:none;
+    user-select:none;
+    cursor: unset;
+    margin: 0 40px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.show {
+    display: block !important;
+}
+
+.show-inline {
+    display: inline-block !important;
+}
+
+.main {
+    margin: 0 40px 0;
+}
+
+.itemList {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.itemList .item {
+    border: 0.5px #E9E9E9 solid;
+    margin-bottom: 40px;
+}
+
+.imgFrame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E9E9E9;
+    overflow: hidden;
+}
+
+.imgFrame img:not([src='./images/default.png']) {
+    width: 100%;
+}
+
+.itemImg {
+    width: 285px;
+    height: 285px;
+}
+
+.itemInfo {
+    padding: 10px 10px 12px;
+}
+
+h2.itemTitle {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+    margin-bottom: 5px;
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+}
+
+.avatar .avatarBg {
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-radius: 100%;
+    margin-right: 5px;
+    overflow: hidden;
+}
+
+.avatar img {  
+    width: 100%; 
+}
+
+.avatarName {
+    font-size: 10px;
+    line-height: 20px;
+    font-weight: bold;
+}
+
+ul.bigDotList li {
+    display: flex;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 10px;
+    margin-bottom: 2px;
+    align-items: center;
+}
+
+ul.bigDotList li::before {
+    content: ' ';
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 100%;
+    margin-right: 5px;
+}
+
+.priceInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px 12px;
+    background-color: #E9E9E9;
+}
+
+.priceInfo .price p + p {
+    margin-top: 5px;
+}
+
+.priceInfo .price p:nth-of-type(1) {
+    font-weight: bold;
+    font-size: 8px;
+    line-height: 8px;
+}
+
+.priceInfo .price p:nth-of-type(2) {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.priceInfo .price p:nth-of-type(3) {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 12px;
+    opacity: 0.2;
+}
+
+.sendPopup {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.sendPopup .sendForm {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 450px;
+    height: 170px;
+    background-color: #fff;
+    padding: 25px;
+    border: 1px solid #E9E9E9;
+    animation: fadeIn;
+    animation-duration: .2s;
+}
+
+.sendPopup .sendForm label {
+    width: 100%;
+    height: 60px;
+    margin-bottom: 25px;
+}
+
+.sendPopup .sendForm label p {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 12px;
+    margin-bottom: 10px;
+}
+
+.sendPopup .sendForm input#wallectAddress {
+    width: 100%;
+    height: 40px;
+    background: #FFFFFF;
+    border: 0.5px solid #000000;
+}
+
+.sendPopup .sendForm .cancelBtn {
+    width: 150px;
+    height: 35px;
+    box-sizing: border-box;
+    background-color: #E9E9E9;
+    color: black;
+    border: none;
+    padding: 0px;
+}
+
+.sendPopup .sendForm .cancelBtn:hover {
+    background-color: #888;
+}
+
+.sendPopup .sendForm .cancelBtn:active {
+    background-color: #555;
+}
+
+.sendPopup .sendForm .sendBtn {
+    width: 150px;
+    height: 35px;
+    box-sizing: border-box;
+    border: none;
+    padding: 0px;
+}
+
+.primaryBtn {
+    display: inline-block;
+    width: 150px;
+    height: 35px;
+    font-size: 12px;
+    line-height: 14px;
+    padding: 10px 25px;
+    text-align: center;
+    color: white;
+    background-color: black;
+    border-radius: 50px;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all .2s;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -o-user-select:none;
+    user-select:none;
+}
+
+.primaryBtn:hover {
+    background-color: #888;
+}
+
+.primaryBtn:active {
+    background-color: #333;
+}
+
+
