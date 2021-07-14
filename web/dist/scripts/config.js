@@ -13,7 +13,7 @@ const NFTAddress = '0x5eeFe0180EbB7387fBCE0f598419a9D11B2c9161';
 const NFTContract = new web3.eth.Contract(NFTabi, NFTAddress, {
   from: account
 });
-const ERC20Address = '0x8924a6a8Ef29b98064576f3b35636c52c7DE2308';
+const ERC20Address = '0x140cfea663C99fCBD63376A99e2B28357B7b2fB2';
 const ERC20Contract = new web3.eth.Contract(ERC20abi, ERC20Address, {
   from: account
 });

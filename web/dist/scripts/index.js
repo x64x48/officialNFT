@@ -7,9 +7,12 @@ async function main () {
   });
   for (let i = 0; i < balance; i++) {
     const tokenId = await tokenOfOwnerByIndex(NFTAddress, i);
-    const URI = await getTokenURI(tokenId)
+    const URI = await getTokenURI(tokenId);
+    if (!URI) {
+      continue;
+    }
     const JSONURI = await tryJSON(URI) ? JSON.parse(URI) : null;
-    const img = JSONURI ? JSONURI.img : 'http://fakeimg.pl/285x285/gg'
+    const img = JSONURI ? JSONURI.img : 'http://fakeimg.pl/285x285/gg';
     const price = await getTokenPrice(tokenId);
     const div = document.createElement("div");
     div.innerHTML = `
@@ -18,7 +21,7 @@ async function main () {
           <img src="${img}" alt="Image not found" onerror="this.onerror=null;this.src='./images/default.png';">
         </a>    
         <div class="itemInfo">
-          <h2 class="itemTitle">ID: ${tokenId} - ${JSONURI.name || URI}</h2>
+          <h2 class="itemTitle">ID: ${tokenId} - ${JSONURI ? JSONURI.name : URI}</h2>
           <div class="avatar">
             <div class="avatarBg">
               <img src="http://fakeimg.pl/20x20/gg" onerror="this.onerror=null;this.style='display:none;';this.parentNode.style='background-color: black;'">
@@ -34,7 +37,7 @@ async function main () {
           <a class="primaryBtn" onclick="buyNFT(${tokenId})">Buy token</a>
         </div>
       </div>
-    `
+    `;
     let elements = document.getElementsByClassName('itemList')[0];
     elements.appendChild(div);
   }

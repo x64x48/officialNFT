@@ -11,7 +11,7 @@ async function getDetailToken (tokenId) {
       <img src="${img}" onerror="this.onerror=null;this.src='./images/default.png';">
     </div>    
     <div class="info">
-      <h1 class="title">ID: ${tokenId} - ${JSONURI.name || URI}</h1>
+      <h1 class="title">ID: ${tokenId} - ${JSONURI ? JSONURI.name : URI}</h1>
       <div class="avatar">
         <div class="avatarBg">
           <img src="http://fakeimg.pl/20x20" onerror="this.onerror=null;this.style='display:none;';this.parentNode.style='background-color: black;'">

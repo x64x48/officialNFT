@@ -30,7 +30,7 @@ async function tokenOfOwnerByIndex (addr, i) {
 async function getTokenURI (tokenId) {
   return new Promise(function (resolve, reject) {
     NFTContract.methods.tokenURI(tokenId).call((err, data) => {
-      if (err) reject(err);
+      if (err) resolve(null);
       resolve(data);
     });
   });
