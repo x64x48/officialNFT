@@ -26,7 +26,7 @@ async function main () {
             <div class="avatarBg">
               <img src="http://fakeimg.pl/20x20/gg" onerror="this.onerror=null;this.style='display:none;';this.parentNode.style='background-color: black;'">
             </div>
-            <p class="avatarName">icarusdjr</p>
+            <p class="avatarName">official</p>
           </div>
         </div>
         <div class="priceInfo">
@@ -34,7 +34,7 @@ async function main () {
             <p>Price:</p>
             <p>${price} OFCL</p>
           </div>
-          <a class="primaryBtn" onclick="buyNFT(${tokenId})">Buy token</a>
+          <a class="primaryBtn" onclick="buyNFT(${tokenId})">BUY NOW</a>
         </div>
       </div>
     `;

@@ -1,6 +1,6 @@
 async function getDetailToken (tokenId) {
   const owner = await ownerOf(tokenId);
-  const buttonDiv = (owner.toLowerCase() == account.toLowerCase()) ? `<a class="primaryBtn sendBtn" onclick="sendNFT(${tokenId})">Send to wallet</a>` : `<a class="primaryBtn showBtn" onclick="buyNFT(${tokenId})">Buy token</a>`;
+  const buttonDiv = (owner.toLowerCase() == account.toLowerCase()) ? `<a class="primaryBtn sendBtn" onclick="sendNFT(${tokenId})">Send to wallet</a>` : `<a class="primaryBtn showBtn" onclick="buyNFT(${tokenId})">BUY NOW</a>`;
   const URI = await getTokenURI(tokenId);
   const JSONURI = await tryJSON(URI) ? JSON.parse(URI) : null;
   const img = JSONURI ? JSONURI.img : 'http://fakeimg.pl/550x550/gg';
@@ -16,7 +16,7 @@ async function getDetailToken (tokenId) {
         <div class="avatarBg">
           <img src="http://fakeimg.pl/20x20" onerror="this.onerror=null;this.style='display:none;';this.parentNode.style='background-color: black;'">
         </div>
-        <p class="avatarName">icarusdjr</p>
+        <p class="avatarName">official</p>
       </div>
       <div class="currentPrice">
         <div class="price">
@@ -61,7 +61,7 @@ async function getSellingNFTWithout (disableId) {
           <div class="avatarBg">
             <img src="http://fakeimg.pl/20x20/gg" onerror="this.onerror=null;this.style='display:none;';this.parentNode.style='background-color: black;'">
           </div>
-          <p class="avatarName">icarusdjr</p>
+          <p class="avatarName">official</p>
         </div>
       </div>
       <div class="priceInfo">
@@ -69,7 +69,7 @@ async function getSellingNFTWithout (disableId) {
           <p>Price:</p>
           <p>${price} OFCL</p>
         </div>
-        <a class="primaryBtn" onclick="buyNFT(${tokenId})">Buy token</a>
+        <a class="primaryBtn" onclick="buyNFT(${tokenId})">BUY NOW</a>
       </div>
     </div>
     `
