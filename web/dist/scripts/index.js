@@ -26,7 +26,7 @@ async function main () {
             <div class="avatarBg">
               <img src="http://fakeimg.pl/20x20/gg" onerror="this.onerror=null;this.style='display:none;';this.parentNode.style='background-color: black;'">
             </div>
-            <p class="avatarName">official</p>
+            <p class="avatarName">Official</p>
           </div>
         </div>
         <div class="priceInfo">

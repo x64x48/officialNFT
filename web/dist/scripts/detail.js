@@ -16,7 +16,7 @@ async function getDetailToken (tokenId) {
         <div class="avatarBg">
           <img src="http://fakeimg.pl/20x20" onerror="this.onerror=null;this.style='display:none;';this.parentNode.style='background-color: black;'">
         </div>
-        <p class="avatarName">official</p>
+        <p class="avatarName">Official</p>
       </div>
       <div class="currentPrice">
         <div class="price">
@@ -61,7 +61,7 @@ async function getSellingNFTWithout (disableId) {
           <div class="avatarBg">
             <img src="http://fakeimg.pl/20x20/gg" onerror="this.onerror=null;this.style='display:none;';this.parentNode.style='background-color: black;'">
           </div>
-          <p class="avatarName">official</p>
+          <p class="avatarName">Official</p>
         </div>
       </div>
       <div class="priceInfo">
