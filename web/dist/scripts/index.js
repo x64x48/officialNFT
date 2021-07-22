@@ -34,7 +34,7 @@ async function main () {
             <p>Price:</p>
             <p>${price} OFCL</p>
           </div>
-          <a class="primaryBtn" onclick="buyNFT(${tokenId})">BUY NOW</a>
+          <a class="primaryBtn" onclick="buyNFT('${tokenId}')">BUY NOW</a>
         </div>
       </div>
     `;

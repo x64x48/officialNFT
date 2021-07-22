@@ -1,6 +1,6 @@
 async function getDetailToken (tokenId) {
   const owner = await ownerOf(tokenId);
-  const buttonDiv = (owner.toLowerCase() == account.toLowerCase()) ? `<a class="primaryBtn sendBtn" onclick="sendNFT(${tokenId})">Send to wallet</a>` : `<a class="primaryBtn showBtn" onclick="buyNFT(${tokenId})">BUY NOW</a>`;
+  const buttonDiv = (owner.toLowerCase() == account.toLowerCase()) ? `<a class="primaryBtn sendBtn" onclick="sendNFT('${tokenId}')">Send to wallet</a>` : `<a class="primaryBtn showBtn" onclick="buyNFT('${tokenId}')">BUY NOW</a>`;
   const URI = await getTokenURI(tokenId);
   const JSONURI = await tryJSON(URI) ? JSON.parse(URI) : null;
   const img = JSONURI ? JSONURI.img : 'http://fakeimg.pl/550x550/gg';
@@ -69,7 +69,7 @@ async function getSellingNFTWithout (disableId) {
           <p>Price:</p>
           <p>${price} OFCL</p>
         </div>
-        <a class="primaryBtn" onclick="buyNFT(${tokenId})">BUY NOW</a>
+        <a class="primaryBtn" onclick="buyNFT('${tokenId}')">BUY NOW</a>
       </div>
     </div>
     `
