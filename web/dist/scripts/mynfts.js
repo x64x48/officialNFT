@@ -36,7 +36,7 @@ async function main () {
           <p>Price:</p>
           <p>${price} OFCL</p>
         </div>
-        <a class="primaryBtn sendBtn" onclick="sendNFT(${tokenId})">Send to wallet</a>
+        <a class="primaryBtn sendBtn" onclick="sendNFT('${tokenId}')">Send to wallet</a>
       </div>
     </div>
     `

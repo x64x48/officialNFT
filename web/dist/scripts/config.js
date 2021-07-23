@@ -17,3 +17,6 @@ const ERC20Address = '0x140cfea663C99fCBD63376A99e2B28357B7b2fB2';
 const ERC20Contract = new web3.eth.Contract(ERC20abi, ERC20Address, {
   from: account
 });
+
+console.log('NFTAddress', NFTAddress);
+console.log('ERC20Address', ERC20Address);
