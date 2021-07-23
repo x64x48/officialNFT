@@ -117,6 +117,7 @@ header .action .connectWallet {
 .itemList .item {
     border: 0.5px #E9E9E9 solid;
     margin-bottom: 40px;
+    max-width: 285.5px;
 }
 
 .imgFrame {
@@ -145,6 +146,11 @@ h2.itemTitle {
     font-size: 18px;
     line-height: 18px;
     margin-bottom: 5px;
+    word-break: break-word;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .avatar {

@@ -56,7 +56,7 @@ async function getSellingNFTWithout (disableId) {
         <img src="${img}" alt="Image not found" onerror="this.onerror=null;this.src='./images/default.png';">
       </a>    
       <div class="itemInfo">
-        <h2 class="itemTitle">ID: ${tokenId} - ${JSONURI.name || URI}</h2>
+        <h2 class="itemTitle">${JSONURI.name || URI}</h2>
         <div class="avatar">
           <div class="avatarBg">
             <img src="http://fakeimg.pl/20x20/gg" onerror="this.onerror=null;this.style='display:none;';this.parentNode.style='background-color: black;'">
