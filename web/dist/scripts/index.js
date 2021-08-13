@@ -15,31 +15,34 @@ async function main () {
     const img = JSONURI ? JSONURI.img : 'http://fakeimg.pl/285x285/gg';
     const price = await getTokenPrice(tokenId);
     const div = document.createElement("div");
-    div.innerHTML = `
-      <div class="item">
-        <a class="imgFrame itemImg" href="./detail.html?tokenId=${tokenId}">
-          <img src="${img}" alt="Image not found" onerror="this.onerror=null;this.src='./images/default.png';">
-        </a>    
-        <div class="itemInfo">
-          <h2 class="itemTitle">${JSONURI ? JSONURI.name : URI}</h2>
-          <div class="avatar">
-            <div class="avatarBg">
-              <img src="http://fakeimg.pl/20x20/gg" onerror="this.onerror=null;this.style='display:none;';this.parentNode.style='background-color: black;'">
+    if(!JSONURI.name.includes('Name String Testing Will Be')){
+      div.innerHTML = `
+        <div class="item">
+          <a class="imgFrame itemImg" href="./detail.html?tokenId=${tokenId}">
+            <img src="${img}" alt="Image not found" onerror="this.onerror=null;this.src='./images/default.png';">
+          </a>    
+          <div class="itemInfo">
+            <h2 class="itemTitle">${JSONURI ? JSONURI.name : URI}</h2>
+            <div class="avatar">
+              <div class="avatarBg">
+                <img src="http://fakeimg.pl/20x20/gg" onerror="this.onerror=null;this.style='display:none;';this.parentNode.style='background-color: black;'">
+              </div>
+              <p class="avatarName">Official</p>
             </div>
-            <p class="avatarName">Official</p>
+          </div>
+          <div class="priceInfo">
+            <div class="price">
+              <p>Price:</p>
+              <p>${price} OFCL</p>
+            </div>
+            <a class="primaryBtn" onclick="buyNFT('${tokenId}')">BUY NOW</a>
           </div>
         </div>
-        <div class="priceInfo">
-          <div class="price">
-            <p>Price:</p>
-            <p>${price} OFCL</p>
-          </div>
-          <a class="primaryBtn" onclick="buyNFT('${tokenId}')">BUY NOW</a>
-        </div>
-      </div>
-    `;
-    let elements = document.getElementsByClassName('itemList')[0];
-    elements.appendChild(div);
+      `;
+      let elements = document.getElementsByClassName('itemList')[0];
+      elements.appendChild(div);
+    }
+   
   }
 }
 
