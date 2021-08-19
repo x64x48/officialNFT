@@ -136,7 +136,7 @@ async function buyNFT (tokenId) {
         tran.on('receipt', receipt => { resolve(receipt); });
         tran.on('error', err => { reject(err) });
       });
-      alert('done!');
+      alert("Buying NFT successfully. Your NFT has been in 'My NFTs'.");
     } else {
       throw new Error('status error');
     }
